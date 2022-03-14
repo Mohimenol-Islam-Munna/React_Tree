@@ -60,6 +60,36 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Manager",
+        "attributes": {
+          "department": "Marketing"
+        },
+        "children": [
+          {
+            "name": "Sales Officer",
+            "attributes": {
+              "department": "A"
+            },
+            "children": [
+              {
+                "name": "Salespeople"
+              }
+            ]
+          },
+          {
+            "name": "Sales Officer",
+            "attributes": {
+              "department": "B"
+            },
+            "children": [
+              {
+                "name": "Salespeople"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
