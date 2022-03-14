@@ -4,6 +4,9 @@ import "./styles.css";
 import Items from "./Items";
 import { Tree, TreeNode } from "react-organizational-chart";
 
+import DThree from "./DThree";
+import DThreeWithCustomNode from "./DThreeWithCustomNode";
+
 const items = [
   {
     title: "Elements",
@@ -193,37 +196,48 @@ const initechOrg = [
 
 export default function App() {
   return (
-    <div style={{ margin: "100px" }}>
-      <Tree
-        lineBorderRadius="100%"
-        lineColor="blueviolet"
-        lineHeight="30px"
-        lineWidth="1px"
-        label={
-          <div
-            style={{
-              display: "inline-block",
-              border: "1px solid palegreen",
-              borderRadius: "20px",
-              padding: "10px",
-            }}
-          >
-            {" "}
-            <h6
+    <>
+      <div style={{ margin: "100px" }}>
+        <Tree
+          lineBorderRadius="100%"
+          lineColor="blueviolet"
+          lineHeight="30px"
+          lineWidth="1px"
+          label={
+            <div
               style={{
-                margin: "2px",
-                padding: "0px",
-                color: "blueviolet",
+                display: "inline-block",
+                border: "1px solid palegreen",
+                borderRadius: "20px",
+                padding: "10px",
               }}
             >
-              Root Element
-            </h6>
-            <img src="images/download.png" alt="user" width="40" height="40" />
-          </div>
-        }
-      >
-        <Items items={initechOrg} />
-      </Tree>
-    </div>
+              {" "}
+              <h6
+                style={{
+                  margin: "2px",
+                  padding: "0px",
+                  color: "blueviolet",
+                }}
+              >
+                Root Element
+              </h6>
+              <img
+                src="images/download.png"
+                alt="user"
+                width="40"
+                height="40"
+              />
+            </div>
+          }
+        >
+          <Items items={initechOrg} />
+        </Tree>
+      </div>
+      <div>
+        <h2 style={{ textAlign: "center" }}>D3 Tree With Custom NOde</h2>
+        <DThreeWithCustomNode />
+      </div>
+    </>
   );
 }
